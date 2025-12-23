@@ -5,8 +5,12 @@ Platform Abstraction Layer for PC-ALE.
 ## What is PAL?
 
 PAL is **Layers 8 + 9** from the MARS-ALE architecture:
-- **Layer 8:** Radio Abstraction (interfaces)
-- **Layer 9:** Radio Drivers (protocol encoders)
+- **Layer 8: Subnetwork Access** - Hardware abstraction interfaces (IRadio, ISerial, IAudioDriver)
+- **Layer 9: Subnetwork Dependent Convergence** - Protocol encoders (CI-V, CAT, Kenwood)
+
+> **Note:** MARS-ALE uses MIL-STD layer numbering, NOT OSI. Layers 8-9 refer to the
+> hardware/radio abstraction layers defined by the MARS-ALE core team - not the
+> humorous "OSI Layer 8 = users" concept.
 
 PAL translates "Set 14.250 MHz, USB" into bytes for your specific radio:
 
